@@ -41,7 +41,7 @@ cd flask-expense-app</code></pre>
             </li>
             <li>
                 <strong>Run the application:</strong>
-                <pre><code>flask run</code></pre>
+                <pre><code>python3 main.py</code></pre>
                 <p>The application will be available at <code>http://127.0.0.1:5000/</code>.</p>
             </li>
         </ol>
