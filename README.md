@@ -81,8 +81,8 @@ cd flask-expense-app</code></pre>
         <div class="screenshots">
             <h3>Home Page</h3>
             <img src="static/images/home.png" alt="Home Page">
-            <h3>Add Expense</h3>
-            <img src="static/images/add_expense.png" alt="Add Expense">
+            <h3>Register Page/h3>
+            <img src="static/images/register.png" alt="Register">
             <h3>Profile</h3>
             <img src="static/images/profile.png" alt="Profile">
             <h3>Analysis</h3>
