@@ -22,7 +22,7 @@
         <ol>
             <li>
                 <strong>Clone the repository:</strong>
-                <pre><code>git clone https://github.com/yourusername/flask-expense-app.git
+                <pre><code>git clone https://github.com/yourusername/Expense-App.git
 cd flask-expense-app</code></pre>
             </li>
             <li>
