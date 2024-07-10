@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expense Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body style="background-color: rgb(27, 0, 117); color:azure ;">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <div class="bg-nav py-3 me-2 mb-4">
+        <div class="d-flex bg-nav flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                <img class="me-2 ms-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1eaQNykVAJlcO30aAIUla9LpnsLXhqpqRg&s" width="40" height="32" alt="Expense App Logo">
+                <span class="fs-4 text-light">Expense App</span>
+            </a>
+            <nav class="mt-2 mt-md-0 ms-md-auto">
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none text-light" href="/">Home</a>
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none text-light" href="/analysis">Analysis</a>
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none text-light" href="/profile">Profile</a>
+                <a class="me-3 py-2 link-body-emphasis text-decoration-none text-light" href="/settings">Setting</a>
+            </nav>
+            <a href="/logout" class="btn btn-outline-light ms-3 me-3">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Expense Analysis</h1>
+        
+        <div class="row mt-5 ms-400">
+            <div class="col-md-5">
+                <h2 class="mb-4"style="background-color: rgb(52, 24, 103);">Expenses by Category      </h2>
+                <canvas id="categoryChart"></canvas>
+                <script id="categoryData" type="application/json">{{ expenses_by_category | tojson }}</script>
+            </div>
+            
+        </div>
+        <div class = "row mt-5 ms-400">
+            <div class="col-md-7">
+                <h2 class="mb-4"  style="background-color: rgb(52, 24, 103);">Monthly Expenses by Year</h2>
+                <div id="yearlyCharts"></div>
+                <script id="yearlyData" type="application/json">{{ expenses_by_year_month | tojson }}</script>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.bg-nav{
+        
+    background-color: rgb(52, 24, 103) 
+    
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.ms-200{
+    margin-left: 200px;
+}
+.ms-100{
+    margin-left: 100px;
+}
+
+.ms-400{
+    margin-left: 400px;
+}
+.mt-70{
+    margin-top: 70px;
+}
+
+.me-200{
+    margin-right: 200px;
+
+}
+.bg-gradient-earning {
+    background: rgb(255, 170, 252);
+    color:#000000;
+}
+
+.bg-gradient-expense {
+    background-color: rgb(109, 115, 220); 
+    color:#000000;
+}
+
+.bg-gradient-balance {
+    background: rgb(255, 170, 252);
+    color:#000000;
+}
+
+.bg-gradient-transaction {
+    background: linear-gradient(45deg, #033d00, #14df0a);
+}
+
+.bg-gradient-daily {
+    background: linear-gradient(45deg, #000000, #0c1a79);
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgb(109, 115, 220); 
+ }
+
+.table-striped>thead>tr>th {
+    background-color: rgb(255, 170, 252);
+}
+ .table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: rgb(255, 170, 252);
+}
+body {
+    background: rgb(19,0,41);
+background: linear-gradient(90deg, rgba(19,0,41,1) 16%, rgba(163,0,85,1) 49%, rgba(4,0,85,1) 86%); 
+}
