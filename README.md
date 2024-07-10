@@ -2,7 +2,7 @@
     <div class="container">
         <h1>Flask Expense App</h1>
         <h2>Overview</h2>
-      <p>Flask Expense App is a web-based application that helps users track their expenses and earnings. The app allows users to add, view, and manage their expenses and earnings, providing insights through a user-friendly interface. It includes features like user authentication, expense categorization, and financial analysis.</p>
+      <p>Flask Expense App is a web-based application that helps users track their expenses and earnings. The app allows users to add, view, and manage their expenses, providing insights through a user-friendly interface. It includes features like user authentication, expense categorization, and financial analysis.</p>
        <h2>Features</h2>
         <ul>
             <li><strong>User Authentication</strong>: Register and login functionality with secure session management.</li>
@@ -24,11 +24,6 @@
                 <strong>Clone the repository:</strong>
                 <pre><code>git clone https://github.com/yourusername/flask-expense-app.git
 cd flask-expense-app</code></pre>
-            </li>
-            <li>
-                <strong>Create a virtual environment and activate it:</strong>
-                <pre><code>python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`</code></pre>
             </li>
             <li>
                 <strong>Install the dependencies:</strong>
@@ -63,7 +58,7 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`</code></pre>
             <li><strong>Logout</strong>: Securely log out from your account.</li>
         </ol>
      <h2>File Structure</h2>
-        <pre><code>flask-expense-app/
+        <pre><code>expense_app/
 ├── main.py
 ├── requirements.txt
 ├── templates/
@@ -77,7 +72,11 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`</code></pre>
 │   ├── css/
 │   ├── js/
 │   └── avatars/
-└── README.md</code></pre>
+├── database/
+│   ├── expense_DB.sql
+│   
+└── README.md
+</code></pre>
    <h2>Screenshots</h2>
         <div class="screenshots">
             <h3>Home Page</h3>
